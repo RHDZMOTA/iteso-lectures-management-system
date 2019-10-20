@@ -4,6 +4,12 @@ This repo contains some utility scripts to manage homeworks, classwork, exams, e
 
 ## Setup
 
+Download this repository and the submodules: 
+
+```commandline
+$ git clone --recurse-submodules git@github.com:RHDZMOTA/iteso-lectures-management-system.git
+```
+
 Install dependencies: 
 
 * Bash tools.
@@ -13,6 +19,9 @@ Install dependencies:
     * [python](https://www.python.org/): `sudo apt install python3`
 
 ## Usage 
+
+The `manage.sh` script automatically creates git-submodules for each class repository and student. 
+Environment variables are used for configuration of the target repositories. 
 
 ### Config File
 

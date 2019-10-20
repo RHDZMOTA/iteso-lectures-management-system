@@ -5,7 +5,7 @@ function random-uuid() {
 }
 
 function repository-operations() {
-  # Either clone repository of pull latest changes.
+  # Either clone repository or pull latest changes.
   local full_name="${1}"
   local target_path="${CREDIT_SCORING_STUDENT_INFO_PATH}/${full_name}"
   local repourl="git@github.com:${full_name}.git"
@@ -21,7 +21,7 @@ function repository-operations() {
 }
 
 function repo-forks() {
-  # Get all forks for a given exam.
+  # Get all forks for a given repository.
   local target_repo="${1}"
   while read -r full_name; do
     repository-operations "${full_name}"
