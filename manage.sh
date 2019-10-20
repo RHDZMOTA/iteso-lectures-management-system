@@ -15,8 +15,8 @@ function repository-operations() {
     git -C "${target_path}" checkout master
     git -C "${target_path}" pull origin master
   else
-    echo "Repository ${full_name} does not exists; git clone ..."
-    git submodule add "${repourl}" "${target_path}"
+    echo "Repository ${full_name} does not exists; git clone master branch..."
+    git submodule add -b master "${repourl}" "${target_path}"
   fi
 }
 
